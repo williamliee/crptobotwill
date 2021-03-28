@@ -1,0 +1,39 @@
+# Copy this file to config.yml to get started and then add your own configuration.
+# Full documentation here: https://github.com/CryptoSignal/crypto-signal/blob/master/docs/config.md
+
+settings:
+  log_mode: text
+  log_level: INFO
+  output_mode: cli
+  update_interval: 300
+  market_pairs:
+    - BNB/USDT
+    - BNB/BUSD
+    - BTC/USDT
+
+exchanges:
+  binance:
+    required:
+      enabled: true
+
+indicators:
+    momentum:
+        - enabled: true
+          alert_enabled: true
+          alert_frequency: once
+          signal:
+            - momentum
+          hot: 0
+          cold: 0
+          candle_period: 1h
+          period_count: 10
+    macd:
+        - enabled: true
+          alert_enabled: true
+          alert_frequency: once
+          signal:
+            - macd
+          hot: 0
+          cold: 0
+          candle_period: 1h
+          period_count: 10
